@@ -1,4 +1,4 @@
-package org.example.adapter;
+package org.example;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.example.client.Client;
@@ -13,6 +13,11 @@ public class ClientToPersonAdapter {
     private Person person;
 
     public ClientToPersonAdapter() {
+
+    }
+
+    public ClientToPersonAdapter(Client client) {
+        adapt(client);
     }
 
     public Person getPerson() {
@@ -48,4 +53,5 @@ public class ClientToPersonAdapter {
         identityCard.setIdSeries(dul.getSeries());
         return identityCard;
     }
+
 }

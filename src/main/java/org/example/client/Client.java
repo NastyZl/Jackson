@@ -7,11 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 public class Client {
     private ClientFindInfo findInfo;
 
-    @Override
-    public String toString() {
-        return "Client{" +
-                "findInfo=" + findInfo +
-                '}';
+    public Client() {
     }
 
     @JacksonXmlProperty(localName = "clientFindInfo")
@@ -23,6 +19,10 @@ public class Client {
         this.findInfo = findInfo;
     }
 
-    public Client() {
+    @Override
+    public String toString() {
+        return "Client{" +
+                "findInfo=" + findInfo +
+                '}';
     }
 }

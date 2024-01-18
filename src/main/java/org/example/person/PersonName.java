@@ -14,15 +14,6 @@ public class PersonName {
     public PersonName() {
     }
 
-    @Override
-    public String toString() {
-        return "PersonName{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                '}';
-    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -45,5 +36,14 @@ public class PersonName {
 
     public void setSecondName(String secondName) {
         this.secondName = secondName;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonName{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                '}';
     }
 }

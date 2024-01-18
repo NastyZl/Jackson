@@ -4,12 +4,7 @@ public class ClientFindInfo {
     private Dul dul;
     private int partyId;
 
-    @Override
-    public String toString() {
-        return "FindInfo{" +
-                "dul=" + dul +
-                ", partyId=" + partyId +
-                '}';
+    public ClientFindInfo() {
     }
 
     public Dul getDul() {
@@ -28,6 +23,11 @@ public class ClientFindInfo {
         this.partyId = partyId;
     }
 
-    public ClientFindInfo() {
+    @Override
+    public String toString() {
+        return "FindInfo{" +
+                "dul=" + dul +
+                ", partyId=" + partyId +
+                '}';
     }
 }

@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "PersonInfo": {
+      "type": "object",
+      "properties": {
+        "FindPersonInfo": {
+          "type": "object",
+          "properties": {
+            "PersonName": {
+              "type": "object",
+              "properties": {
+                "LastName": { "type": "string" },
+                "FirstName": { "type": "string" },
+                "MiddleName": { "type": "string" }
+              },
+              "required": ["LastName", "FirstName", "MiddleName"]
+            },
+            "IdentityCard": {
+              "type": "object",
+              "properties": {
+                "IdType": { "type": "integer" },
+                "IdSeries": { "type": "integer" },
+                "IdNum": { "type": "integer" }
+              },
+              "required": ["IdType", "IdSeries", "IdNum"]
+            },
+            "PartyID": { "type": "integer" }
+          },
+          "required": ["PersonName", "IdentityCard", "PartyID"]
+        }
+      },
+      "required": ["FindPersonInfo"]
+    }
+  },
+  "required": ["PersonInfo"]
+}
