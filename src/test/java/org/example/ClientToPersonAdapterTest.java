@@ -50,11 +50,15 @@ class ClientToPersonAdapterTest {
 
     @Test
     @Order(2)
-    void deserializedToJson() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ClientToPersonAdapter person = new ClientToPersonAdapter();
-        person.adapt(client);
-        objectMapper.writeValue(new File("src/main/resources/PersonInfo.json"), person);
+    void deserializedToJson(){
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            ClientToPersonAdapter person = new ClientToPersonAdapter();
+            person.adapt(client);
+            objectMapper.writeValue(new File("src/main/resources/PersonInfo.json"), person);
+        } catch (Exception e) {
+            fail(e);
+        }
     }
 
     @Test
