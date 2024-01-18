@@ -3,11 +3,10 @@ package org.example.person;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PersonName {
-    @JsonProperty("FirstName")
-    private String firstName;
-
     @JsonProperty("LastName")
     private String lastName;
+    @JsonProperty("FirstName")
+    private String firstName;
 
     @JsonProperty("MiddleName")
     private String secondName;

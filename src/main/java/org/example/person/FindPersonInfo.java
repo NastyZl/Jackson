@@ -4,11 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FindPersonInfo {
 
-    private int partyID;
-
     private PersonName personName;
 
     private IdentityCard identityCard;
+
+    private int partyID;
 
     public FindPersonInfo() {
     }

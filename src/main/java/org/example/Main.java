@@ -18,7 +18,8 @@ public class Main {
         System.out.println(clientInfo);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Person person = ClientToPersonAdapter.adapt(clientInfo);
+        ClientToPersonAdapter person = new ClientToPersonAdapter();
+        person.adapt(clientInfo);
         System.out.println(person);
         objectMapper.writeValue(new File("PersonInfo.json"), person);
     }
